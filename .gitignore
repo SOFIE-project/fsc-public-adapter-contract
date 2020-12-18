@@ -1,5 +1,4 @@
 node_modules
 build
 chain
-public/ropsten/keystore/
-!public/ropsten/keystore/.gitkeep
+.idea/

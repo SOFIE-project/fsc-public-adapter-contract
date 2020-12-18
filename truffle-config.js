@@ -23,7 +23,7 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 const fs = require('fs');
 const keythereum = require("keythereum");
 
-const address = "<ropsten address>";
+const address = "e2c676d11dd3af0404991b71781c599d89356b30";
 const datadir = "public/ropsten"
 const pw_file = "public/ropsten/keystore/password.txt"
 const keyObject  = keythereum.importFromFile(address, datadir);
@@ -47,7 +47,7 @@ module.exports = {
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
-    
+
     local: {
      host: "127.0.0.1",     // Localhost (default: none)
      port: 8545,            // Standard Ethereum port (default: none)
@@ -57,7 +57,7 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-      provider: () => new HDWalletProvider(String(mnemonic), "<infura ropsten uri>"),
+      provider: () => new HDWalletProvider(String(mnemonic), "https://ropsten.infura.io/v3/c96300b21ee04e0795403a181a08a73f"),
       network_id: 3,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
